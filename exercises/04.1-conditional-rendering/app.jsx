@@ -2,13 +2,28 @@ import React from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 
-const Alert = props => {
+const Alert = ({ text, color }) => {
 	// Your component here
-
+	if (color === "red") {
+		return (
+			<div className="alert alert-danger" role="alert">
+				{text}
+			</div>
+		);
+	} else {
+		
+			/* For yellow color */
+		return(
+			<div className="alert alert-warning" role="alert">
+				{text}
+			</div>
+		);
+		
+	}
 };
 Alert.propTypes = {
 	color: PropTypes.string,
-	text: PropTypes.string
+	text: PropTypes.string,
 };
 
 // Here is where the <Alert /> component is being used, you don't have to edit this part

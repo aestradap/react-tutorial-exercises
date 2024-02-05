@@ -2,16 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 
-const Alert = ({show, text}) => {
+const Alert = props => {
 	// Add the condition inside this function
-	if(show){
+
 	return (
 		<div className="alert alert-primary" role="alert">
-			{text}
+			This is a primary alert - check it out!
 		</div>
-	);}else{
-		return null;
-	}
+	);
 };
 
 Alert.propTypes = {
